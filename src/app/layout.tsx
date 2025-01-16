@@ -18,13 +18,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
       <body className={inter.className}>
-        <div className="min-h-screen flex">
+        <div className="min-h-screen flex bg-background text-foreground">
           <Sidebar />
-          <div className="flex-1">
+          <div className="flex-1 flex flex-col">
             <Header />
-            <main className="p-6">{children}</main>
+            <main className="flex-1 p-6 overflow-auto md:ml-64">
+              <div className="max-w-7xl mx-auto animate-fade-in">
+                {children}
+              </div>
+            </main>
           </div>
         </div>
       </body>
