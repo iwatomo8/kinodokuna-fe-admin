@@ -1,16 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { FileText } from "lucide-react";
+import Link from "next/link";
 
 type Params = Promise<{ id: string }>;
 
-export default function CaseDetailsPage({ params }: { params: Params }) {
+export default async function CaseDetailsPage({ params }: { params: Params }) {
+  const { id } = await params;
   return (
     <Card>
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle>案件詳細</CardTitle>
         <div className="space-x-2">
-          <Button variant="outline">編集</Button>
+          <Button variant="outline" asChild>
+            <Link href={`/organizations/${id}/edit`}>
+              <FileText className="h-4 w-4 mr-2" />
+              編集
+            </Link>
+          </Button>
           <Button variant="destructive">削除</Button>
         </div>
       </CardHeader>
