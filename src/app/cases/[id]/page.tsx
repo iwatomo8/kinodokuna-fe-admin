@@ -14,7 +14,7 @@ export default async function CaseDetailsPage({ params }: { params: Params }) {
         <CardTitle>案件詳細</CardTitle>
         <div className="space-x-2">
           <Button variant="outline" asChild>
-            <Link href={`/organizations/${id}/edit`}>
+            <Link href={`/cases/${id}/edit`}>
               <FileText className="h-4 w-4 mr-2" />
               編集
             </Link>
