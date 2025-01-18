@@ -9,6 +9,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { mockOrganizationDetails } from "@/lib/mock-data";
 import {
   Building2,
   FileText,
@@ -20,21 +21,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
-const organizationData = {
-  id: 1,
-  name: "NPO法人 子ども支援センター",
-  type: "NPO法人",
-  description:
-    "子どもたちの健やかな成長を支援する活動を行っています。学習支援、食育活動、居場所づくりなど、多角的なアプローチで子どもたちの未来をサポートしています。",
-  location: "東京都新宿区○○町1-2-3",
-  members: 25,
-  activeProjects: 3,
-  completedProjects: 12,
-  email: "info@kodomo-support.org",
-  phone: "03-1234-5678",
-  website: "https://www.kodomo-support.org",
-  image: "/placeholder.svg",
-};
+const organizationData = mockOrganizationDetails;
 
 type Params = Promise<{ id: string }>;
 
