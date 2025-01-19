@@ -25,7 +25,6 @@ export default function OrganizationsPage() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <Button>新規団体登録</Button>
         </div>
       </div>
 
