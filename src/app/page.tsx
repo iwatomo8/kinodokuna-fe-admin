@@ -2,16 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
+import { mockCases } from "@/lib/mock-data";
 import Link from "next/link";
 
 export default function CasesListPage() {
-  const cases = [
-    { id: 1, title: "子ども食堂の運営支援", status: "進行中" },
-    { id: 2, title: "高齢者向け配食サービス", status: "募集中" },
-    { id: 3, title: "学習支援ボランティア募集", status: "募集中" },
-    { id: 4, title: "フードバンク物資提供", status: "完了" },
-    { id: 5, title: "地域清掃活動支援", status: "募集中" },
-  ];
+  const cases = mockCases;
 
   return (
     <div className="space-y-6 animate-slide-in">
@@ -19,7 +14,6 @@ export default function CasesListPage() {
         <h2 className="text-3xl font-bold">案件一覧</h2>
         <div className="flex gap-4 w-full sm:w-auto">
           <Input type="search" placeholder="検索..." className="max-w-xs" />
-          <Button>新規案件</Button>
         </div>
       </div>
 

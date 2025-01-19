@@ -4,41 +4,14 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { mockOrganizations } from "@/lib/mock-data";
 import { Building2, MapPin, Users } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
 export default function OrganizationsPage() {
   const [searchQuery, setSearchQuery] = useState("");
-  const organizations = [
-    {
-      id: 1,
-      name: "NPO法人 子ども支援センター",
-      type: "NPO法人",
-      location: "東京都新宿区",
-      members: 25,
-      activeProjects: 3,
-      image: "/placeholder.svg",
-    },
-    {
-      id: 2,
-      name: "一般社団法人 シルバーケア協会",
-      type: "一般社団法人",
-      location: "東京都港区",
-      members: 15,
-      activeProjects: 2,
-      image: "/placeholder.svg",
-    },
-    {
-      id: 3,
-      name: "社会福祉法人 みらい",
-      type: "社会福祉法人",
-      location: "東京都世田谷区",
-      members: 40,
-      activeProjects: 5,
-      image: "/placeholder.svg",
-    },
-  ];
+  const organizations = mockOrganizations;
 
   return (
     <div className="space-y-6">
@@ -52,7 +25,6 @@ export default function OrganizationsPage() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
-          <Button>新規団体登録</Button>
         </div>
       </div>
 

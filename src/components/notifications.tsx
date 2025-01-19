@@ -9,6 +9,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { mockNotifications } from "@/lib/mock-data";
 import { Bell } from "lucide-react";
 import * as React from "react";
 
@@ -20,28 +21,7 @@ type Notification = {
 };
 
 export function Notifications() {
-  const [notifications, setNotifications] = React.useState<Notification[]>([
-    {
-      id: "1",
-      title: "新規案件応募",
-      description: "「子ども食堂の運営支援」に新しい応募がありました。",
-      date: "2023-06-15T10:00:00",
-    },
-    {
-      id: "2",
-      title: "メッセージ受信",
-      description:
-        "「高齢者向け配食サービス」に関する新しいメッセージがあります。",
-      date: "2023-06-14T15:30:00",
-    },
-    {
-      id: "3",
-      title: "案件期限迫る",
-      description:
-        "「学習支援ボランティア募集」の募集期限が1週間後に迫っています。",
-      date: "2023-06-13T09:15:00",
-    },
-  ]);
+  const [notifications, setNotifications] = React.useState(mockNotifications);
 
   const unreadCount = notifications.length;
 
