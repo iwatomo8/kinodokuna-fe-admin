@@ -14,7 +14,6 @@ export default function CasesListPage() {
         <h2 className="text-3xl font-bold">案件一覧</h2>
         <div className="flex gap-4 w-full sm:w-auto">
           <Input type="search" placeholder="検索..." className="max-w-xs" />
-          <Button>新規案件</Button>
         </div>
       </div>
 
