@@ -28,13 +28,6 @@ export default function SignInPage() {
         <CardContent>
           <div className="grid gap-6">
             <Button variant="outline" onClick={handleSignIn} className="w-full">
-              <Image
-                src="/google.svg"
-                width={20}
-                height={20}
-                alt="Google"
-                className="mr-2"
-              />
               Googleでログイン
             </Button>
           </div>
